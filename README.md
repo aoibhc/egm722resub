@@ -1,64 +1,51 @@
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/iamdonovan/egm722.binder/main)
+EGM733 Resubmission Project - Interactive Folium Map of Northern Ireland Wards
 
-# EGM722: Programming for GIS and Remote Sensing Exercises
+This project creates an interactive folium map of Northern Ireland using ward polygons, counties, roads, airport location, and transport data. The final map includes tooltips, pop-ups, choropleth, as well as additional features such as a minimap and fullscreen toggle mode.
+The provided script creates a file called map.html which can be opened in any web browser, although this was trialled in Google Chrome during creation.
 
-For full setup and installation instructions, please see [the website](https://iamdonovan.github.io/teaching/egm722/setup/index.html).
+Repository Contents;
+- week3_map.py -> main python script
+- environment.yml -> conda environment file
+- LICENSE 
+- .gitignore -> ignored file
+- data_files -> shapefiles & CSVs
+- README.md -> documentation of project
 
-## 1. Getting started
 
-To get started with the exercises, you'll need to install both `git` and `conda` on your computer. You can follow the
-instructions provided on Blackboard, or from the instructions for installing git from [here](https://git-scm.com/downloads), 
-and Anaconda from [here](https://docs.anaconda.com/anaconda/install/). 
+Installation Instructions:
 
-## 2. Download/clone this repository
+(All of the below steps were carried out on Anaconda Prompt, which was installed via Anaconda Navigator desktop app)
 
-Once you have these installed, __clone__ this repository to your computer by doing one of the following things:
+Step 1 - Install Conda
 
-1. Open GitHub Desktop and select __File__ > __Clone Repository__. Select the __URL__ tab, then enter the URL for this 
-   repository.
-2. Open __Git Bash__ (from the __Start__ menu), then navigate to your folder for this module.
-   Now, execute the following command: `git clone https://github.com/iamdonovan/egm722.git`. You should see some messages
-   about downloading/unpacking files, and the repository should be set up.
-3. You can also clone this repository by clicking the green "clone or download" button above, and select "download ZIP"
-   at the bottom of the menu. Once it's downloaded, unzip the file and move on to the next step. I don't recommend this
-   step, however, as it will be more difficult for you to download the material for each week. 
+Step 2 - Create the Environment
+Run the following code:
+	
+	conda env create -f environment.yml
 
-## 3. Create a conda environment
+Step 3 = Activate the Environent
+run:
 
-Once you have successfully cloned the repository, you can then create a `conda` environment to work through the exercises.
+	conda activate egm722resub 
 
-To do this, use the environment.yml file provided in the repository. If you have Anaconda Navigator installed,
-you can do this by selecting __Import__ from the bottom of the __Environments__ panel. 
 
-Otherwise, you can open a command prompt (on Windows, you may need to select an Anaconda command prompt). Navigate
-to the folder where you cloned this repository and run the following command:
+How to Run This Script:
+- Download repository and files and script
+- Activate conda environment
+- Run:
+	python week3_map.py
+- Open map.html in a web browser
 
-```
-C:\Users\iamdonovan> conda env create -f environment.yml
-```
 
-This will probably take some time (so feel free to catch up on Facebook or whatever kids do nowadays), but fortunately 
-you will only have to do this once. If you
+Data Sources:
+- NI_Wards.shp
+- Counties.shp
+- NI_roads.shp
+- Airports.csv
+- transport_data.csv
 
-## 4. Start Jupyter Lab
+Notes:
+- This script requires all files to be inside a file named data_files
+- This map uses WGS84 (EPSG:4326)
 
-From Anaconda Navigator, you can launch Jupyter Lab, and navigate to the folder where the first week's
-practical material is located. Make sure that your `egm722` environment is activated.
-
-From the command-line, first open a terminal window or an __Anaconda Prompt__, and navigate to the folder where you have
-cloned the repository.
-
-Activate your newly-created environment (`conda activate egm722`). Next, run Jupyter Lab (`jupyter-lab`),
-which should launch a web browser window, which should give you an overview of the current folder. 
-
-## 5. Next steps
-The material for this module is organized as follows:
-
-- Week 1. Introduction to git and programming with python
-- Week 2. More introduction to python
-- Week 3. Working with vector data in python
-- Week 4. Working with raster data in python
-- Week 5. Additional exercises
-
-You are free to work through the material at your own pace. If you are enrolled in EGM722 at Ulster University, you
-will find additional resources via the module webpage on Blackboard.
+Author - Aoibh Coogan
