@@ -30,8 +30,8 @@ def convert_to_wgs84(gdf):
 # ------------------------------------------------------------
 def join_transport_data(wards, transport_df):
     """
-	This function joins transport data to the wards layer using the Ward Code column found in oth layer files.
-	input: wards(gdf of ward polygons), transport_df (DataFrame with bus, train, and distance info)
+	This function joins transport data to the wards layer using the Ward Code column found in both layer files.
+	input: wards (gdf of ward polygons), transport_df (DataFrame with bus, train, and distance info)
 	output: a merged gdf containing both spatial and transport information.
     """
     return wards.merge(transport_df, on="Ward Code", how="left")
