@@ -3,6 +3,8 @@ EGM733 Resubmission Project - Interactive Folium Map of Northern Ireland Wards
 This project creates an interactive folium map of Northern Ireland using ward polygons, counties, roads, airport location, and transport data. The final map includes tooltips, pop-ups, choropleth, as well as additional features such as a minimap and fullscreen toggle mode.
 The provided script creates a file called map.html which can be opened in any web browser, although this was trialled in Google Chrome during creation.
 
+ALL FILES NEEDED CAN BE FOUND IN THE WEEK 3 FOLDER OF THIS REPOSITORY
+
 Repository Contents;
 - week3_map.py -> main python script
 - environment.yml -> conda environment file
